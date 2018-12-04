@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Null0rg/newton.svg?branch=master)](https://travis-ci.org/Null0rg/newton)
 
-This project is for teaching purposes only. It features an immature C++-based implementation of the well known [Newton Method](https://en.wikipedia.org/wiki/Newton%27s_method) and demonstrates how to write unit test it.
+This project is for teaching purposes only. It features an immature C++-based implementation of the well known [Newton Method](https://en.wikipedia.org/wiki/Newton%27s_method) and demonstrates how to write unit tests for it.
 
 ## How To Build and Test
 
