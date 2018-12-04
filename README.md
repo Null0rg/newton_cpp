@@ -5,6 +5,8 @@
 
 This project is for teaching purposes only. It features an immature C++-based implementation of the well known [Newton Method](https://en.wikipedia.org/wiki/Newton%27s_method) and demonstrates how to write unit tests for it.
 
+Tests are executed on Linux, macOS (via [travis-ci.org](https://travis-ci.org/)) and Windows (via [AppVeyor.com](https://www.appveyor.com/)).
+
 ## How To Build and Test
 
 ### Requirements
