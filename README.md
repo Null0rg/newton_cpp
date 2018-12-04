@@ -9,10 +9,10 @@ This project is for teaching purposes only. It features an immature C++-based im
 
 ### Requirements
 
-- C+\+ Compiler with C+\+11 support (tested with Clang, GCC, MSVC+\+ 2017 on x64)
+- C+\+ compiler with C+\+11 support (tested with Clang, GCC, MSVC+\+ 2017 on x64)
 - CMake >= 3.5
-- make (on Unix/Linux)
-- MSBuild.exe (on Windows, usually comes with MSVC+\+)
+- make (only on Unix/Linux)
+- MSBuild.exe (only on Windows, usually comes with MSVC+\+)
 
 #### Bash (Linux/macOS/Cygwin/other Unix-like Shell)
 
