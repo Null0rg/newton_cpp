@@ -1,6 +1,6 @@
 # newton_cpp
 
-[![Build Status](https://travis-ci.org/Null0rg/newton.svg?branch=master)](https://travis-ci.org/Null0rg/newton)
+[![Build Status](https://travis-ci.org/Null0rg/newton.svg?branch=master)](https://travis-ci.org/Null0rg/newton_cpp)
 [![Build status](https://ci.appveyor.com/api/projects/status/2mqf5pdncf45i5c1?svg=true)](https://ci.appveyor.com/project/miho/newton-cpp)
 
 This project is for teaching purposes only. It features an immature C++-based implementation of the well known [Newton Method](https://en.wikipedia.org/wiki/Newton%27s_method) and demonstrates how to write unit tests for it.
