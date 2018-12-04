@@ -1,0 +1,43 @@
+# Build worker image (VM template)
+image: Visual Studio 2017
+
+# scripts that are called at very beginning, before repo cloning
+init:
+  - date /T & time /T
+  - git config --global core.autocrlf input
+  - cmake --version
+
+#branches:
+#  only:
+#  - master
+
+clone_depth: 50
+
+version: '{build}'
+
+platform:
+  - x64
+
+configuration:
+  - Release
+
+environment:
+  MSBUILD_FLAGS: /verbosity:minimal /maxcpucount
+  matrix:
+    - generator: "Visual Studio 15 2017 Win64"    
+
+matrix:
+  fast_finish: true
+
+#cache:
+#  - C:\projects\newton_cpp\
+
+build_script:
+  - cd %APPVEYOR_BUILD_FOLDER%
+  
+  - if not exist build mkdir build
+  - cd build
+  # generate build script
+  - cmake .. -G "%generator%"
+  - MSBuild.exe .\newton_test.vcxproj
+  - MSBuild.exe .\RUN_TESTS.vcxproj
