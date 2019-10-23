@@ -5,8 +5,11 @@
 // For header-only usage of the boost test framework
 // see https://www.boost.org/doc/libs/1_64_0/libs/test/doc/html/boost_test/usage_variants.html#boost_test.usage_variants.single_header
 
+#include <cmath>
+
 // class to be tested
 #include <newton.h>
+
 
 void create_find_root_test(Function f, Function df, double x0, double expected) {
   Newton newton;
@@ -22,6 +25,10 @@ BOOST_AUTO_TEST_CASE( find_root, * boost::unit_test::timeout(1 /*seconds*/) )
 
   create_find_root_test([](double x) -> double { return x;}, [](double x) -> double { return 1;}, 1, 0);
   create_find_root_test([](double x) -> double { return x + 1;}, [](double x) -> double { return 1;}, 1, -1);
+  
+  create_find_root_test([](double x) -> double {return sin(x);} , [](double x) -> double {return cos(x);}, 1, 0);
+  create_find_root_test([](double x) -> double {return sin(x);} , [](double x) -> double {return cos(x);}, 2.8, M_PI);
+  create_find_root_test([](double x) -> double {return sin(x);} , [](double x) -> double {return cos(x);}, 5.8, 2*M_PI);
   
   // non converging case
   try {
